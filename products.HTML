@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Nunito:wght@300&display=swap" rel="stylesheet">
+  <title>Átremo</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/logo.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="products.css" rel="stylesheet">
+</head>
+<body>
+	  <header id="header" class="d-flex flex-column justify-content-center">
+        <a href="index.HTML" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a>
+        
+
+  </header><!-- End Header -->
+  <hr class="line1">
+  <h4 class="Prod"><u>Products</u></h4>
+  <div id="content-wrapper">
+		
+
+		<div class="column">
+			<img id=featured src="assets/img/greyfront.png">
+
+			<div id="slide-wrapper" >
+				<img id="slideLeft" class="arrow" src="assets/img/arrow-left.png">
+
+				<div id="slider">
+					<img class="thumbnail active" src="assets/img/greyfront.png">
+					<img class="thumbnail" src="assets/img/greyback.png">
+					<img class="thumbnail" src="assets/img/brownfront.png">
+
+					<img class="thumbnail" src="assets/img/brownback.png">
+					<img class="thumbnail" src="assets/img/beigefront.png">
+					<img class="thumbnail" src="assets/img/beigeback.png">
+				
+				</div>
+
+				<img id="slideRight" class="arrow" src="assets/img/arrow-right.png">
+			</div>
+		</div>
+
+		<div class="column">
+			<h1>The Mute Swan</h1>
+			<hr>
+			<h3>$50</h3>
+
+			<p>Introducing "The Mute Swan" hoodie collection, where style meets subtlety. Our first variant showcases an elegantly embroidered text on the front, serving as a gentle reminder to embrace the power of silence. The second variant takes it up a notch with a striking puff print on the back, symbolizing the strength that lies within working quietly. Lastly, our third variant combines both techniques, creating a harmonious blend of visual appeal and the timeless notion of achieving greatness in silence.</p>
+
+			<input value=1 type="number">
+			<a class="btn btn-dark" href="#">Add to Cart</a>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		let thumbnails = document.getElementsByClassName('thumbnail')
+
+		let activeImages = document.getElementsByClassName('active')
+
+		for (var i=0; i < thumbnails.length; i++){
+
+			thumbnails[i].addEventListener('mouseover', function(){
+				console.log(activeImages)
+				
+				if (activeImages.length > 0){
+					activeImages[0].classList.remove('active')
+				}
+				
+
+				this.classList.add('active')
+				document.getElementById('featured').src = this.src
+			})
+		}
+
+
+		let buttonRight = document.getElementById('slideRight');
+		let buttonLeft = document.getElementById('slideLeft');
+
+		buttonLeft.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft -= 180
+		})
+
+		buttonRight.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft += 180
+		})
+
+
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
